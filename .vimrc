@@ -47,6 +47,7 @@ Bundle 'tomasr/molokai'
 filetype plugin indent on     " required!
 
 colorscheme molokai
+set shortmess=atI
 set laststatus=2
 set nobackup
 set number
@@ -67,3 +68,15 @@ set hlsearch
 set encoding=utf8
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
+
+if (has('gui_running'))
+    set lines=32 columns=128
+    set guioptions-=T
+endif
+
+if (has('unix'))
+    cd ~/Git/
+endif
+
+
+
