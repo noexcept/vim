@@ -14,15 +14,17 @@ Bundle 'gmarik/vundle'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
-"Bundle 'Lokaltog/vim-powerline'
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'bling/vim-airline'
+"Bundle 'msanders/snipmate.vim'
+"Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'bling/vim-airline'
 Bundle 'tomasr/molokai'
+Bundle 'Lokaltog/vim-powerline'
 
 " vim-scripts repos
 "Bundle 'L9'
@@ -46,6 +48,8 @@ Bundle 'tomasr/molokai'
 "vundle end
 filetype plugin indent on     " required!
 
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf='~/Git/.ycm_extra_conf.py'
 colorscheme molokai
 set shortmess=atI
 set laststatus=2
@@ -75,7 +79,7 @@ if (has('gui_running'))
 endif
 
 if (has('unix'))
-    cd ~/Git/
+    cd ~/Git/apue
 endif
 
 
