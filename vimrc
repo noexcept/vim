@@ -3,16 +3,14 @@ filetype off
 
 if (has('win32'))
     set guifont=Consolas:h11:cANSI
-    cd D:/Projects/
     let $PATH.=';'
-    let $PATH.='C:/DevTools/Git/bin;'
-    let $PATH.='C:/DevTools/Perl/bin;'
-    let $PATH.='C:/DevTools/Python27/DLLs;'
-    let $PATH.='C:/DevTools/Ruby200/bin;'
-    let $PATH.='C:/DevTools/LLVM/bin;'
-    let $PATH.='C:/DevTools/MinGW_DISTRO/bin/;D:/DevTools/MinGW_DISTRO/git/bin/;'
-    let $PATH.='C:/DevTools/MinGW/bin/;D:/DevTools/MinGW/msys/1.0/bin;'
-    let $PATH.='C:/DevTools/CMake 2.8/bin;'
+    let $PATH.='D:/DevTools/Git/bin;'
+    let $PATH.='D:/DevTools/Perl/bin;'
+    let $PATH.='D:/DevTools/Python27/DLLs;'
+    let $PATH.='D:/DevTools/Ruby/bin;'
+    let $PATH.='D:/DevTools/LLVM/bin;'
+    let $PATH.='D:/DevTools/MinGW/bin/;D:/DevTools/MinGW/msys/1.0/bin;'
+    let $PATH.='D:/DevTools/CMake 2.8/bin;'
 
     set rtp+=~/vimfiles/bundle/Vundle.vim/
     let path='~/vimfiles/bundle'
@@ -22,7 +20,6 @@ if (has('win32'))
 endif
 
 if (has('unix'))
-    cd ~/Git/apue
     set rtp+=~/.vim/bundle/vundle/
 
     call vundle#begin()
@@ -85,13 +82,13 @@ set wildmenu
 set ignorecase
 set hlsearch
 
-set encoding=utf8
-set langmenu=zh_CN.UTF-8
-language message zh_CN.UTF-8
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-set fileencoding=utf-8
-set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
+"set encoding=utf8
+"set langmenu=zh_CN.UTF-8
+"language message zh_CN.UTF-8
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
+"set fileencoding=utf-8
+"set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
 
 "bufferÇÐ»»°ó¶¨¼ü
 map <C-right> <ESC>:bn<CR>
