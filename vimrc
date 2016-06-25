@@ -90,6 +90,5 @@ set hlsearch
 "set fileencoding=utf-8
 "set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
 
-"bufferÇÐ»»°ó¶¨¼ü
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
