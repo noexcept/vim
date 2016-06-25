@@ -1,40 +1,24 @@
 set nocompatible
 filetype off 
 
-if (has('win32'))
-    set guifont=Consolas:h11:cANSI
-    let $PATH.=';'
-    let $PATH.='D:/DevTools/Git/bin;'
-    let $PATH.='D:/DevTools/Perl/bin;'
-    let $PATH.='D:/DevTools/Python27/DLLs;'
-    let $PATH.='D:/DevTools/Ruby/bin;'
-    let $PATH.='D:/DevTools/LLVM/bin;'
-    let $PATH.='D:/DevTools/MinGW/bin/;D:/DevTools/MinGW/msys/1.0/bin;'
-    let $PATH.='D:/DevTools/CMake 2.8/bin;'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-    set rtp+=~/vimfiles/bundle/Vundle.vim/
-    let path='~/vimfiles/bundle'
-    call vundle#begin(path)
-
-    let g:ycm_global_ycm_extra_conf='~/vimfiles/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-endif
-
-if (has('unix'))
-    set rtp+=~/.vim/bundle/vundle/
-
-    call vundle#begin()
-    let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-    let g:ycm_global_ycm_extra_conf='~/Git/.ycm_extra_conf.py'
-endif
-
-if (has('gui_running'))
-    set lines=32 columns=128
-    set shortmess=atI
-    set guioptions-=T
-endif
-
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 "original repos on GitHub
+Plugin 'dracula/vim'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'elzr/vim-json'
+Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'dgryski/vim-godef'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'majutsushi/tagbar'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'tpope/vim-rails.git'
@@ -42,27 +26,15 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'msanders/snipmate.vim'
 "Plugin 'bling/vim-airline'
 "Plugin 'SirVer/ultisnips'
-Plugin 'elzr/vim-json'
-Plugin 'honza/vim-snippets'
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
-Plugin 'tomasr/molokai'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'dgryski/vim-godef'
-Plugin 'Blackrush/vim-gocode'
-Plugin 'majutsushi/tagbar'
-Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
 filetype plugin indent on     " required!
 
 syntax enable
 "colorscheme molokai
-set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme dracula
 
 set shortmess=atI
 set laststatus=2
@@ -92,3 +64,9 @@ set hlsearch
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
+
+if (has('gui_running'))
+    set lines=32 columns=128
+    set shortmess=atI
+    set guioptions-=T
+endif
