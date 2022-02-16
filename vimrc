@@ -7,25 +7,46 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 syntax enable
-filetype plugin indent on     
+
+" allow plugins by file type (required for plugins!)
+filetype plugin on
+filetype indent on     
+
+" hidden startup messages
 set shortmess=atI
+" always show status bar
 set laststatus=2
+
+" disable backup
 set nobackup
-set number
-set ruler
-set showmatch
+
+" highlight cursor line and column
 set cursorline
-set history=1000
-set showcmd
-set spell
-set autoindent
+set cursorcolumn
+
+" tab and spaces handling
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set autoindent
+
+" ui settings
+set number
+set ruler
+set showmatch
+set showcmd
+set spell
+set history=1000
+
+" autocompletion of files and commands
 set wildmenu
+set wildmode=full
+
+" search
 set ignorecase
 set hlsearch
+
 set encoding=utf8
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
