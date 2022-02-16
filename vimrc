@@ -1,4 +1,11 @@
 set nocompatible
+
+call plug#begin()
+" colorscheme onedark
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
 syntax enable
 filetype plugin indent on     
 set shortmess=atI
@@ -19,21 +26,10 @@ set expandtab
 set wildmenu
 set ignorecase
 set hlsearch
-
-call plug#begin()
-" colorscheme onedark
-Plug 'joshdick/onedark.vim'
-call plug#end()
-
+set encoding=utf8
+set fileencoding=utf-8
+set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
 colorscheme onedark
-
-"set encoding=utf8
-"set langmenu=zh_CN.UTF-8
-"language message zh_CN.UTF-8
-"source $VIMRUNTIME/delmenu.vim
-"source $VIMRUNTIME/menu.vim
-"set fileencoding=utf-8
-"set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
@@ -41,11 +37,6 @@ map <C-left> <ESC>:bp<CR>
 if (has('gui_running'))
     set lines=32 columns=128
     set guioptions-=T
-endif
-
-
-if has('win32') || has('win64')
-    set encoding=utf-8
-    setglobal fileencoding=utf-8
-    set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
 endif
