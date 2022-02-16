@@ -1,0 +1,4 @@
+# ignore folder
+# 忽略掉这个plug自动安装的目录 不需要
+# 想了下 还是包一下 方便同步 跑下PlugUpdate就好了
+# vim/plugged

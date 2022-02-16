@@ -21,7 +21,11 @@ set ignorecase
 set hlsearch
 
 call plug#begin()
+" colorscheme onedark
+Plug 'joshdick/onedark.vim'
 call plug#end()
+
+colorscheme onedark
 
 "set encoding=utf8
 "set langmenu=zh_CN.UTF-8
