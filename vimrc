@@ -1,50 +1,6 @@
 set nocompatible
-filetype off 
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'dracula/vim'
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-Plugin 'elzr/vim-json'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/syntastic'
-Plugin 'Raimondi/delimitMate'
-
-Plugin 'dgryski/vim-godef'
-Plugin 'Blackrush/vim-gocode'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/taglist.vim'
-
-Plugin 'majutsushi/tagbar'
-"Plugin 'Lokaltog/vim-powerline'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'tpope/vim-rails.git'
-"Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'msanders/snipmate.vim'
-"Plugin 'bling/vim-airline'
-"Plugin 'SirVer/ultisnips'
-"Plugin 'Valloric/YouCompleteMe'
-call vundle#end()
-
-filetype plugin indent on     " required!
-
 syntax enable
-"set background=dark
-"colorscheme molokai
-"colorscheme solarized
-colorscheme dracula
-"let g:airline#extensions#tabline#enabled = 1
-set guifont=Menlo:h13
-
+filetype plugin indent on     
 set shortmess=atI
 set laststatus=2
 set nobackup
@@ -55,14 +11,12 @@ set cursorline
 set history=1000
 set showcmd
 set spell
-
 set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set wildmenu
-
 set ignorecase
 set hlsearch
 
