@@ -20,6 +20,9 @@ set wildmenu
 set ignorecase
 set hlsearch
 
+call plug#begin()
+call plug#end()
+
 "set encoding=utf8
 "set langmenu=zh_CN.UTF-8
 "language message zh_CN.UTF-8
