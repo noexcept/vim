@@ -60,4 +60,5 @@ if (has('gui_running'))
     set guioptions-=T
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
+    set guifont=Fira_Code_Retina,Consolas,Ubuntu_Mono,DejaVu_Sans_Mono:h11
 endif

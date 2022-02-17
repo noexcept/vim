@@ -4,7 +4,7 @@
 ln -s vim/vimrc .vimrc
 ln -s vim/vim .vim
 # windows 使用mklink
-mklink /J .vim vim\vim
+mklink /J vimfiles vim\vim
 mklink /H .vimrc vim\vimrc
 # 安装完成后 打开vim 执行:PlugInstall 安装一堆插件
 ```
