@@ -4,6 +4,8 @@ call plug#begin()
 " colorscheme onedark
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
+" 调用ToggleListchars 开关空白显示
+Plug 'teto/vim-listchars'
 call plug#end()
 
 syntax enable
