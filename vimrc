@@ -57,10 +57,26 @@ colorscheme onedark
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
 
-if (has('gui_running'))
+
+if !exists("g:os")
+    if has("win32") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
+if has('gui_running')
+    if g:os == "Windows"
+        set guifont=Fira_Code_Retina:h12:W450:cANSI:qDRAFT
+    elseif g:os == "Linux"
+        set guifont=Fira\ Code\ 12
+    elseif g:os == "Darwin"
+        set guifont=Fira\ Code:h12
+    endif
     set lines=32 columns=128
     set guioptions-=T
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
-    set guifont=Fira_Code_Retina,Consolas,Ubuntu_Mono,DejaVu_Sans_Mono:h11
 endif
+
