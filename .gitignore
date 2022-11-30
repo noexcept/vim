@@ -1,3 +1,3 @@
 # ignore folder
 # 忽略掉这个plug自动安装的目录 不需要
-vim/plugged
+plugged
