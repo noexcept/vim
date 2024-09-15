@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin()
 " colorscheme onedark
 Plug 'joshdick/onedark.vim'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 " 调用ToggleListchars 开关空白显示
 Plug 'teto/vim-listchars'
 call plug#end()
@@ -52,7 +52,10 @@ set hlsearch
 set encoding=utf8
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
+
+" scheme 
 colorscheme onedark
+let g:lightline = { 'colorscheme': 'onedark', }
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
@@ -72,6 +75,7 @@ if has('gui_running')
     elseif g:os == "Linux"
         set guifont=Fira\ Code\ 12
     elseif g:os == "Darwin"
+        set macligatures
         set guifont=Fira\ Code:h12
     endif
     set lines=32 columns=128
