@@ -6,6 +6,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 " 调用ToggleListchars 开关空白显示
 Plug 'teto/vim-listchars'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 syntax enable
@@ -56,6 +57,9 @@ set fileencodings=utf-8,gbk,ucs-bom,gb18030,gb2312,cp936
 " scheme 
 colorscheme onedark
 let g:lightline = { 'colorscheme': 'onedark', }
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
