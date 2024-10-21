@@ -59,7 +59,7 @@ colorscheme onedark
 let g:lightline = { 'colorscheme': 'onedark', }
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
